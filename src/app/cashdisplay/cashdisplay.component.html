@@ -1,0 +1,8 @@
+<div class="displayamount">
+  <div class="card">
+    <p>Please Collect cash</p>
+    <div *ngFor="let item of result | keyvalue" style="padding: 2px">
+      Currency: <b>{{ item.key }}</b> No Of notes: <b>{{ item.value }}</b>
+    </div>
+  </div>
+</div>

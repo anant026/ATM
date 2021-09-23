@@ -1,0 +1,23 @@
+<form class="landingPage" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div class="card">
+    <div style="margin: 10px">
+      <label style="display: block; text-align: center">Enter card no</label>
+      <input
+        type="number"
+        formControlName="cardNo"
+        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+      />
+    </div>
+    <div style="margin: 10px">
+      <label style="display: block; text-align: center">Enter card pin</label>
+      <input
+        type="number"
+        formControlName="pin"
+        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+      />
+    </div>
+    <div style="margin: 10px">
+      <button [disabled]="!myForm.valid">validate</button>
+    </div>
+  </div>
+</form>
